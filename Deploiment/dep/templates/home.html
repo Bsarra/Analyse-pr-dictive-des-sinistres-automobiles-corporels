@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab3  Sinistre </title>
+</head>
+<body>
+
+
+
+
+
+
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Delta</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Application pour prédir l'état de l'individu</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+    
+
+        <hr />
+
+        <div class="row">
+            <div class="col-sm-8">
+
+                <h4 class="page-header">Application pour prédir la gravité de l'état d'un individu </h4>
+                <form role="form" action="{{url_for('predict')}}" method='POST'>
+                    <div class="form-group float-label-control">
+                        <label for="">La route</label>
+                       
+                        <select name='larrout' class="form-control">
+                        	<option value="1">Autoroute</option>
+                        	<option value="2">Route Nationale</option>
+                        	<option value="3">Route Départementale</option>
+                        	<option value="4">Voie Communale</option>
+                        	<option value="5">Hors réseau public</option>
+                        	<option value="6">Parc de stationnement ouvert à la circulation publique</option>
+                        	 <option value=9">autre</option>
+
+                        </select>
+
+
+
+
+
+
+                        <!--<input type="text" class="form-control" name='larrout' placeholder="La route">-->
+                    </div>
+                    <div class="form-group float-label-control">
+                        <label for="">Surface</label>
+
+
+                   <select name='surf' class="form-control">
+                        	<option value="1">normale</option>
+                        	<option value="2">Rmouillée</option>
+                        	<option value="3">flaques</option>
+                        	<option value="4">inondée</option>
+                        	<option value="5">enneigée</option>
+                        	<option value="6">boue</option>
+                        	                        	
+                        	<option value="7"> verglacée</option>
+                        	<option value="8">corps gras - huile</option>
+
+                        	 <option value=9">autre</option>
+
+                        </select>
+
+
+
+
+
+                        
+                    </div>
+                    <div class="form-group float-label-control">
+                        <label for="">Infrastructure</label>
+                        
+
+ <select name='infra' class="form-control">
+                        	<option value="1">Souterrain - tunnel</option>
+                        	<option value="2">Pont - autopont</option>
+                        	<option value="3">Bretelle d’échangeur ou de raccordement</option>
+                        	<option value="4">Voie ferrée</option>
+                        	<option value="5">Carrefour aménagé</option>
+                        	<option value="6">Zone piétonne</option>
+                        	 <option value="7">Zone de péage</option>
+                        	
+                        </select>
+
+
+                    </div>
+                    <div class="form-group float-label-control">
+                        <label for="">Climat</label>
+                       
+<select name='env1' class="form-control">
+                        	<option value="1">Normale</option>
+                        	<option value="2">Pluie légère</option>
+                        	<option value="3">Pluie forte</option>
+                        	<option value="4">Neige - grêle</option>
+                        	<option value="5">Brouillard - fumée</option>
+                        	<option value="6">Vent fort - tempête</option>
+                        	 <option value="7">Temps éblouissant</option>
+                        	<option value="8">Temps couvert</option>
+                        	<option value="9">Autre</option>
+                        </select>
+
+
+
+                    </div>
+                    <div class="form-group float-label-control">
+                        <label for="">Situation</label>
+                       
+
+
+
+
+<select name='situ' class="form-control">
+                        	<option value="1">Sur chaussée</option>
+                        	<option value="2">Sur bande d’arrêt d’urgence</option>
+                        	<option value="3">Sur accotement</option>
+                        	<option value="4">Sur trottoir</option>
+                        	<option value="5">Sur piste cyclable</option>
+                        	
+                        </select>
+
+
+
+                    </div>
+                      <div class="form-group float-label-control">
+                        <label for="">Place</label>
+                        <input type="text" class="form-control" name="place" placeholder="Place">
+
+
+
+
+
+
+
+
+                    </div>
+                    <div class="form-group float-label-control">
+                        <label for="">Categorie d'usager</label>
+                       
+
+
+<select name='catu' class="form-control">
+                        	<option value="1">Conducteur</option>
+                        	<option value="2">Passager</option>
+                        	<option value="3">Piéton</option>
+                        	<option value="4">Piéton en roller ou en trottinette</option>
+                        	
+                        	
+                        </select>
+
+
+
+
+
+                    </div>
+                                    <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+				 <input type="submit" value="predict" class="btn btn-info">
+                        </h3>
+                    </div>
+                    
+                </div>
+            </div>
+                </form>
+
+            </div>
+            <div class="col-sm-4">
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+</body>
+</html>
